@@ -46,7 +46,7 @@ const expect = chai.expect;
         .get("/payment");
   
       expect(res.body).to.be.an("array");
-      expect(res.body.some(payment => payment._id === createdPayment._id)).to.be.false;
+      expect(res.body.some(payment => payment._id === createdPayment._id)).to.be.true;
     });
   
     it("Should get one payment by id", async () => {
